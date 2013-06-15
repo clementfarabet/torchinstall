@@ -48,6 +48,8 @@ if [[ `uname` == 'Darwin' ]]; then
     brew install libjpeg imagemagick zeromq 
     brew install lua
     brew link readline --force
+    brew uninstall gnuplot
+    brew install gnuplot --pdf --wx --with-x
 
     # Install bleeding edge Luarocks (previous versions have issues)
     brew uninstall luarocks

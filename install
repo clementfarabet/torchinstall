@@ -44,6 +44,8 @@ if [[ `uname` == 'Darwin' ]]; then
     brew install libjpeg imagemagick zeromq 
     brew install lua
     brew link readline --force
+    brew uninstall gnuplot
+    brew install gnuplot --pdf --wx --with-x
 
     # Install bleeding edge Luarocks (previous versions have issues)
     brew uninstall luarocks
@@ -79,6 +81,8 @@ elif [[ `uname` == 'Linux' ]]; then
     sudo apt-get install -y libzmq-dev
     sudo apt-get install -y gfortran
     sudo apt-get install -y unzip
+    sudo apt-get install -y gnuplot
+    sudp apt-get install -y gnuplot-x11
     sudo add-apt-repository ppa:chris-lea/zeromq
     sudo apt-get update
 
